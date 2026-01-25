@@ -5,6 +5,11 @@ choices = ["fibonacci", "square", "triangular", "factorial", "prime"]
 
 def fibonacci(n):
 
+    if n == 0:
+        return []
+    elif n == 1:
+        return[0]
+
     l = [0, 1]
 
     for i in range(n-2):
@@ -24,6 +29,10 @@ def triangular(n):
     return l [1:]
 
 def factorial(n):
+
+    if n == 0:
+        return []
+
     l = [1]
 
     for i in range(1, n+1):
@@ -31,9 +40,11 @@ def factorial(n):
     return l [1:]
 
 def prime(n):
+
+    if n == 0:
+        return []
     
     primes = [2]
-
     p = 3
 
     while len(primes) < n:
