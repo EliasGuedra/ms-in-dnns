@@ -48,14 +48,12 @@ def prime(n):
     p = 3
 
     while len(primes) < n:
-        is_prime = True
         d = 2
         while d**2 <= p:
             if p % d == 0:
-                is_prime = False
                 break
             d += 1
-        if is_prime:
+        else:
             primes.append(p)
         p += 1
     return primes   
