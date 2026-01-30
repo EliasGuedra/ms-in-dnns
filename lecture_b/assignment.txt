@@ -1,0 +1,26 @@
+In excercise 2c we observe a generall U-shape when plotting the MSE on the testdata with respect 
+to the degree of the polynomial that we are fitting. This is because the target function is to 
+complex to be modeled by a low degree polynomial meaning that our model gets underfitted for low
+degrees and likewise it gets overfitted for high degrees due to lack of data and also noisy data
+meaning that we can fit our model to all the noise. The best degree is very dependent on the seed
+though and I found that aroun k = 7 was the best value. It should be mentioned that the higher 
+values of k the more cathastrophic results occur when the data is really bad. For an example 
+does not cover a big part of the intervall.
+
+In excersice 2d we explored how to prevent the overfitting by adding a regularizationterm. In the 
+first plot created using 15 training points and 10 test points we observe how regularization does 
+not appear to help the result at all. When we use 1000 test points we get a more truthful picture
+where we can see that there is a sweet spot for the regularization and that it can be paired with
+much higer degree polynomials without overfitting. If we increase the amount of trainingdata to 
+1500 we observe once again that regularization does not help very much. This is because if we have
+enough traingn data, optimizing the model on the training data is the same as optimizing it on the 
+distribution of the data. Constraining our modelspace will not help us achive that.
+
+In excercise we evaluate our model using cross validation. In the plot shoing cv error and the
+standard deviation we can see that how big folds we divide our data in is a trade of between
+gettign a low predicted mse variation, some sort of bias and compute time. If we do n folds, then 
+we estimate the mse n times and this is what lowers the mse with increasing n. We also gets a "truer"
+average for our mse, since we get a trainingdata data that is more similar to the entire dataset.
+The downside is compute. The more folds we have the more times we have to estimate the MSE. You could
+imagine that you don't itterate through every fold but this would have the variance suffer and instead
+it would be a trade off between variance and bias of our estimator.
