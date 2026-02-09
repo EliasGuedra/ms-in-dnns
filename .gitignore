@@ -1,8 +1,9 @@
-venv
+venv*
 credentials.json
 wandb_key.json
 *.pt
 *.ckpt
+*.png
 **/wandb
 **/cache*
 **/.eggs*
@@ -10,3 +11,4 @@ wandb_key.json
 **/dist
 **/__pycache__
 !lecture_f/mnist_flow_weights_trained.ckpt
+!lecture_d/cifar10_simple/pretrained_cifar10.ckpt

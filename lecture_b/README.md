@@ -26,7 +26,7 @@ pip3 freeze
        Notifications*.
     4. You will get another e-mail with the coupon and an URL to redeem it.
 3. Create a new project by clicking on *Console* at the top right of the
-   [Google Cloud mainpage](https://cloud.google.com/).
+   [Google Cloud mainpage](https://cloud.google.com/); remember to pick the billing account "*Billing account for Education*" in order to use the coupon you have redeemed.
 4. Activate the *Vertex AI API* by searching for "vertex ai" in the search bar at
    the top. You will find it under *Marketplace*. Click on it and *enable* it.
 5. In the navigation bar on the left, scroll down to the section *Products*-*Vertex AI* and click on *Dashboard* (alternatively search for "vertex ai"

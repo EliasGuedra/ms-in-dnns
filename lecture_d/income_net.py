@@ -153,7 +153,7 @@ if __name__ == "__main__":
     if "CREATION_TIMESTAMP" in os.environ:
         timestamp = os.environ["CREATION_TIMESTAMP"]
     else:
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        timestamp = datetime.now().strftime("%Y-%m-%d %H-%M-%S")
     parser.add_argument("--run-name", type=str, default=timestamp)
     args = parser.parse_args()
     main(args)
