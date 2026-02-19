@@ -8,15 +8,15 @@ import json
 from google.cloud import aiplatform, storage
 from google.oauth2 import service_account
 
-PROJECT = "x"
+PROJECT = "62785924402"
 REGION = "europe-west4"
-BUCKET = "gs://msindnn-assignments_bucket"
+BUCKET = "gs://ms-in-dnn-2-bucket"
 EXPERIMENT = "msdnn-assignments"
 EXP_DESCRIPTION = "Assignments for MS in DNNs lecture"
 WANDB_KEY = json.load(open("wandb_key.json"))
 CREDENTIALS = service_account.Credentials.from_service_account_file("credentials.json")
 CONTAINER = "europe-docker.pkg.dev/vertex-ai/training/pytorch-gpu.1-13.py310:latest"
-N_GPUS = 0
+N_GPUS = 1
 DATETIME_FMT = "%Y-%m-%d_%H%M%S"
 
 aiplatform.init(
@@ -64,7 +64,7 @@ def launch_script_job(args):
         "torchvision==0.14.1",
         "matplotlib==3.8.2",
         "pandas==2.1.4",
-        "wandb==0.16.1",
+        "wandb==0.22.3",
         "jsonargparse[signatures]==4.27.1",
         "rich==13.7.0",
         "python-json-logger",
